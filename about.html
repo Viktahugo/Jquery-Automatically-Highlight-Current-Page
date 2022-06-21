@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>About</title>
+<style>
+a{text-decoration:none;}
+.active{background:yellow; padding:2px 6px;}
+</style>
+</head>
+<body>
+
+<div id="wrapper">
+<ul class="navigation">
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</div>
+<br /><br />
+
+
+<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
+<script type="text/javascript">
+$(function(){
+ var pathname = (window.location.pathname.match(/[^\/]+$/)[0]);
+ $('.navigation a').each(function(){
+ 	if ($(this).attr('href') == pathname){
+ 	$(this).addClass('active');
+ 	}
+ });
+});
+</script>
+</body>
+</html>
